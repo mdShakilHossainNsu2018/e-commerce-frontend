@@ -1,16 +1,25 @@
 <template>
 
 
-      <div class="text-center" style="margin-top: 100px">
-        <h1>Home page</h1>
+      <div class="text-center" style="margin-top: 80px">
+        <Carousel/>
+
+        <Products/>
+
+
+
       </div>
 </template>
 
 <script>
 
 
+import Carousel from "~/components/Carousel";
+import Products from "~/components/Products";
 export default {
   components: {
+    Products,
+    Carousel
 
   }
 }
