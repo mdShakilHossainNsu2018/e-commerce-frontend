@@ -2,12 +2,12 @@
     <v-container>
       <v-row>
         <v-col
-          v-for="n in 10"
-          :key="n"
+          v-for="product in productsList"
+          :key="product.id"
           cols="12"
           sm="4"
         >
-          <Product/>
+          <Product :productItem="product" />
 
         </v-col>
 <!--        <v-col>-->
@@ -28,13 +28,13 @@
 
       data(){
           return{
-            products: [
-              {id:1},
-              {id:2},
-              {id:3},
-              {id:4},
-              {id:5},
-            ]
+
+          }
+      },
+
+      computed:{
+          productsList(){
+            return this.$store.state.products;
           }
       }
     }
